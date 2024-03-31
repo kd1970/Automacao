@@ -14,7 +14,7 @@ import sys, os, logging, pathlib, time as t
 logging.basicConfig(level=logging.INFO, filename="robo.log", format="Tipo : %(levelname)s - %(message)s" )
 
 my_host = '127.0.0.1' # HostAdress FQDN is better
-port = 8080
+port = 8080 #PORT NUMBER
 
 class BarThread(QThread):
     change_value = Signal(int)
