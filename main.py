@@ -36,7 +36,7 @@ class UiRobo(QMainWindow):
         self.get_log()
         self.show()
         self.thread = {}
-        
+        self.load_ui()
         #primeiro grupo de fitas - HSM Scratch
         self.BtnPrivt1.clicked.connect(lambda :self.automacao(self.BtnPrivt1.text()))
         self.BtnPrivt2.clicked.connect(lambda :self.automacao(self.BtnPrivt2.text()))
@@ -69,16 +69,16 @@ class UiRobo(QMainWindow):
         self.BtnDasd7.clicked.connect(lambda :self.automacao(self.BtnDasd7.text()))
         self.BtnDasd8.clicked.connect(lambda :self.automacao(self.BtnDasd8.text()))
         self.BtnDasd9.clicked.connect(lambda :self.automacao(self.BtnDasd9.text()))
-    '''
+    
     def load_ui(self):
 
         loader = QUiLoader()
         path = os.fspath(pathlib.Path(__file__).resolve().parent / "TS35.ui")
         ui_file = QFile(path)
-        ui_file.open(QFile.ReadOnly)
+        ui_file.open(QFile.readAll())
         loader.load(ui_file, self)
         ui_file.close()
-    '''
+    
     def start(self, tape):
         logging.info(f'Iniciando a montagem da fita {tape}')
         self.get_log()

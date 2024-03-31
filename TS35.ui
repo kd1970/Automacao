@@ -853,9 +853,7 @@ opacity: 0.5;</string>
   <tabstop>BtnOff</tabstop>
   <tabstop>textBrowser</tabstop>
  </tabstops>
- <resources>
-  <include location="../imgs/Fitas/fitas_rc.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>BtnOff</sender>
